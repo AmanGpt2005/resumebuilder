@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Enhanced Resume Builder</h1>
+        <p>Create your professional resume easily and download it instantly!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="form-section">
+            <h2>Enter Your Details</h2>
+            <form id="resume-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+
+                <label for="title">Professional Title</label>
+                <input type="text" id="title" placeholder="Software Engineer" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="john@example.com" required>
+
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" placeholder="+1234567890" required>
+
+                <label for="summary">Professional Summary</label>
+                <textarea id="summary" rows="4" placeholder="Write a brief summary..."></textarea>
+
+                <label>Work Experience</label>
+                <div id="experience">
+                    <div class="exp-item">
+                        <input type="text" placeholder="Company Name" class="exp-company">
+                        <input type="text" placeholder="Job Title" class="exp-title">
+                        <textarea placeholder="Job Description" class="exp-desc"></textarea>
+                    </div>
+                </div>
+                <button type="button" onclick="addExperience()">Add Experience</button>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </section>
+
+        <!-- Resume Preview -->
+        <section class="preview-section">
+            <h2>Your Resume</h2>
+            <div id="resume-preview">
+                <h1 id="preview-name">Your Name</h1>
+                <h3 id="preview-title">Professional Title</h3>
+                <p id="preview-summary">Your professional summary goes here...</p>
+                <div id="preview-experience">
+                    <h4>Work Experience</h4>
+                    <ul id="preview-exp-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Resume Builder. Made with ❤️.</p>
+    </footer>
+
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
